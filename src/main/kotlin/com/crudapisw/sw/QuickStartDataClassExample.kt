@@ -8,7 +8,7 @@ import kotlinx.coroutines.runBlocking
 data class Movie(val title: String, val year: Int, val cast: List<String>)
 fun main() {
     // Replace the placeholder with your MongoDB deployment's connection string
-    val uri = "mongodb+srv://fabriciobs2000:mongopwd@cluster0.srjsi1d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    val uri = "mongodb+srv://fabriciobs2000:mongopwd@cluster0.srjsi1d.mongodb.net/Cluster0?retryWrites=true&w=majority&appName=Cluster0"
     val mongoClient = MongoClient.create(uri)
     val database = mongoClient.getDatabase("sample_mflix")
     // Get a collection of documents of type Movie

@@ -1,5 +1,6 @@
 package com.crudapisw.sw.controllers
 
+
 import com.crudapisw.sw.entities.Planet
 import com.crudapisw.sw.repositories.PlanetRepository
 import org.springframework.beans.factory.annotation.Autowired
@@ -17,7 +18,7 @@ class PlanetController {
     }
 
     @PostMapping
-    fun createPlanet(@RequestBody planet: Planet): Planet {
-        return planetRepository.save(planet)
+    fun createPlanet(@RequestBody planet: Planet) {
+        planetRepository.save(planet)
     }
 }

@@ -1,20 +1,16 @@
 package com.crudapisw.sw.entities
 
-import jakarta.persistence.*
-import jakarta.validation.constraints.NotNull
+import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.mapping.Document
 
-@Entity
-@Table
+@Document
 data class Planet(
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long,
+    val id: String? = null,
 
-    @field: NotNull
-    val name: String,
-    
-    val climate: String,
-    val terrain: String,
-    val population: Long
+    val name: String? = null,
+
+    val climate: String? = null,
+    val terrain: String? = null,
+    val population: Long? = null
 )
-
